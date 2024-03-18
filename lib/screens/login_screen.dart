@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 color: Colors.black, // replace with your primary color
                 height: 64,
               ),
-              SizedBox(
+             const SizedBox(
                 height: 64,
               ),
               TextFieldInput(
@@ -39,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 textInputType: TextInputType.emailAddress,
                 textEditingController: _emailController,
               ),
-              SizedBox(
+             const SizedBox(
                 height: 24,
               ),
               TextFieldInput(
@@ -48,10 +48,29 @@ class _LoginScreenState extends State<LoginScreen> {
                 textEditingController: _passwordController,
                 isPass: true,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: const Text(
+                      'Dont have an account?',
+                    ),
+                  ),
+                  Container(
+                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  child: const Text(
+                    'Sign up',
+                  ),
+                ),
+                ]
+              )
             ],
+          
           ),
         ),
       ),
